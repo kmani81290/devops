@@ -1,0 +1,11 @@
+"Okay, so if users start reporting failures right after a new release, first thing I do is... I try not to panic. I quickly check the monitoring dashboards — usually Grafana or CloudWatch — to see if there’s any spike in errors or latency. Sometimes I forget to check the right time window, so I double back and make sure I’m looking at the right data."
+
+"Next, I check the deployment logs — like from Jenkins or GitHub Actions — to confirm if the release actually went through cleanly. I’ve had cases where the pipeline said success, but the app didn’t restart properly, so I don’t trust green checkmarks blindly anymore."
+
+"If it looks like the release caused the issue, I usually roll back to the previous stable version. I’ve scripted rollback steps for most services, but yeah, once I forgot to update the rollback tag and it deployed the wrong build — so now I double-check that before hitting deploy."
+
+"While rollback is happening, I notify the team and update the incident channel. I also post a quick note to users if it’s customer-facing — even if it’s just ‘we’re investigating.’ I’ve learned that silence makes things worse."
+
+"After recovery, I dig into logs, error traces, and maybe even user sessions if needed. I document the root cause — sometimes it’s a config mismatch, sometimes a missed dependency. I’ve had one case where a feature flag was flipped in staging but not in prod, and it broke the flow."
+
+"Finally, I update the pipeline or checklist so the same thing doesn’t happen again. I don’t believe in blaming — most of the time it’s a gap in process or communication. So yeah, recover fast, learn from it, and make sure it’s documented clearly."
