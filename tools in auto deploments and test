@@ -1,0 +1,14 @@
+"Yeah, I’ve worked with a bunch of tools for automating deployments and testing. In my current role, I mostly use GitHub Actions and Jenkins for CI/CD. I’ve built pipelines that handle code builds, testing, and deployments — sometimes across multiple environments, which can get tricky if secrets aren’t managed properly."
+
+Deployment Tools:
+GitHub Actions: Easy to set up, and I like how it integrates with repos directly. I’ve used it for container builds and pushing to dev and staging.
+Jenkins: Bit more manual, but good for legacy stuff. I’ve written a few Groovy scripts to customize jobs.
+Terraform: I use it for infra provisioning — mostly AWS. I’ve messed up a state file once, so now I’m extra careful with remote backends.
+Ansible: Handy for config management. I’ve used it to automate patching and service restarts.
+
+Testing Tools:
+PyTest and JUnit: For unit and integration tests. I usually set them up to run automatically in the pipeline.
+SonarQube: Helps catch code smells and bugs early. I’ve had a few false positives, but overall it’s solid.
+Postman/Newman: For API testing. I’ve written test collections and run them as part of pre-deploy checks.
+Cypress: Used it for UI testing — mostly for fintech apps. It’s fast and easy to debug.
+"I try to keep things simple and reliable. If something breaks, I prefer to fix it fast and document it clearly so the team doesn’t hit the same issue again. I’ve learned a lot from trial and error, especially when dealing with infra drift or flaky tests."
