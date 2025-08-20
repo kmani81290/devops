@@ -1,0 +1,21 @@
+    “I start by aligning the pipeline architecture with the application’s delivery goals and infra setup — whether it’s containerized, VM-based, or hybrid.
+
+    I break the pipeline into modular stages: source control, build, test, security, deployment, and observability.
+
+    For source control, I use GitHub with trunk-based development, and enforce PR checks using GitHub Actions workflows and branch protection rules.
+
+    The CI stage runs on GitHub Actions, where I include static code analysis via SonarQube, unit testing with JUnit, and build packaging using Maven or Docker depending on the app.
+
+    I push versioned Docker images to Docker Hub, and trigger CD workflows using Terraform for infra provisioning and Helm for Kubernetes deployments.
+
+    I use blue/green deployment strategy in Kubernetes to reduce downtime and allow quick rollback.
+
+    Post-deployment, I run smoke tests using Postman CLI and validate service health via Prometheus metrics and Grafana dashboards.
+
+    For logging and traceability, I integrate Logstash and Elasticsearch, and set up alerts through Opsgenie.
+
+    Rollback is handled via Helm release history and Terraform state reversion, with tagged Docker images for traceability.
+
+    I enforce RBAC using Kubernetes roles and GitHub team permissions, and maintain audit trails through GitHub logs and ELK stack.
+
+    My goal is to reduce MTTR, improve deployment confidence, and maintain full transparency across dev, staging, and prod environments.”
