@@ -1,7 +1,12 @@
-    We had a CI/CD pipeline failure during a production deployment for a fintech service where the Logstash component stopped ingesting logs post-deploy. The pipeline was triggered via GitHub Actions, deploying Docker containers to a Kubernetes cluster using Helm.
+    We had a CI/CD pipeline failure during a production deployment for a fintech service where the Logstash component stopped ingesting logs post-deploy. 
+The pipeline was triggered via GitHub Actions, deploying Docker containers to a Kubernetes cluster using Helm.
 
-    I noticed the failure through Prometheus alerts and missing logs in Elasticsearch, which immediately flagged a visibility gap. I checked the Helm deployment history and saw that the new config map had a syntax error — it was pushed without validation due to a missing linting step in the pipeline.
+    I noticed the failure through Prometheus alerts and missing logs in Elasticsearch, which immediately flagged a visibility gap.
+I checked the Helm deployment history and saw that the new config map had a syntax error — it was pushed without validation due to a missing linting step in the pipeline.
 
-    To restore service, I rolled back the Helm release to the previous stable version using helm rollback, and re-tagged the Docker image to match the last known good state. I also re-enabled log ingestion and confirmed recovery via Grafana dashboards and smoke tests.
+    To restore service, I rolled back the Helm release to the previous stable version using helm rollback, 
+and re-tagged the Docker image to match the last known good state. I also re-enabled log ingestion and confirmed recovery via Grafana dashboards and smoke tests.
 
-    Post-incident, I updated the pipeline to include config validation using helm lint, added a pre-deploy dry-run stage, and enforced manual approval for critical services. I documented the RCA in our SMAX portal with clear logs and recovery steps to ensure transparency and prevent recurrence.
+    Post-incident, I updated the pipeline to include config validation using helm lint, added a pre-deploy dry-run stage, 
+and enforced manual approval for critical services. I documented the RCA in our SMAX portal with clear logs and recovery steps to ensure transparency and
+prevent recurrence.
