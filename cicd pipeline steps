@@ -4,7 +4,8 @@
 
     For source control, I use GitHub with trunk-based development, and enforce PR checks using GitHub Actions workflows and branch protection rules.
 
-    The CI stage runs on GitHub Actions, where I include static code analysis via SonarQube, unit testing with JUnit, and build packaging using Maven or Docker depending on the app.
+    The CI stage runs on GitHub Actions, where I include static code analysis via SonarQube, unit testing with JUnit, and build packaging using Maven or
+Docker depending on the app.
 
     I push versioned Docker images to Docker Hub, and trigger CD workflows using Terraform for infra provisioning and Helm for Kubernetes deployments.
 
