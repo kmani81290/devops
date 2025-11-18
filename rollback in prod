@@ -1,7 +1,10 @@
-    “In production, I handle rollback by keeping deployments version-controlled and reversible. For example, with Kubernetes, I use Helm to manage releases — so if something breaks, I can quickly run helm rollback to revert to the previous stable version.
+    “In production, I handle rollback by keeping deployments version-controlled and reversible. For example, with Kubernetes, I use Helm to manage releases — 
+so if something breaks, I can quickly run helm rollback to revert to the previous stable version.
 
-    I always tag Docker images and maintain release history in Docker Hub, so I know exactly which version to redeploy. Infrastructure changes are managed through Terraform, and I use state files and versioned modules to roll back safely.
+    I always tag Docker images and maintain release history in Docker Hub, so I know exactly which version to redeploy. Infrastructure changes are managed 
+through Terraform, and I use state files and versioned modules to roll back safely.
 
-    I also monitor post-deployment health using Prometheus and Grafana, and if alerts fire or smoke tests fail, I trigger rollback immediately. The goal is to minimize downtime and restore service fast — ideally within minutes.
+    I also monitor post-deployment health using Prometheus and Grafana, and if alerts fire or smoke tests fail, I trigger rollback immediately.
+The goal is to minimize downtime and restore service fast — ideally within minutes.
 
     I document every rollback with RCA-ready logs using Logstash and Elasticsearch, so the team can learn and improve from each incident.”
