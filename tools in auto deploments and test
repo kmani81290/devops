@@ -1,4 +1,5 @@
-"Yeah, I’ve worked with a bunch of tools for automating deployments and testing. In my current role, I mostly use GitHub Actions and Jenkins for CI/CD. I’ve built pipelines that handle code builds, testing, and deployments — sometimes across multiple environments, which can get tricky if secrets aren’t managed properly."
+"Yeah, I’ve worked with a bunch of tools for automating deployments and testing. In my current role, I mostly use GitHub Actions and Jenkins for CI/CD. 
+I’ve built pipelines that handle code builds, testing, and deployments — sometimes across multiple environments, which can get tricky if secrets aren’t managed properly."
 
 Deployment Tools:
 GitHub Actions: Easy to set up, and I like how it integrates with repos directly. I’ve used it for container builds and pushing to dev and staging.
